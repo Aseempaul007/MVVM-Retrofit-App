@@ -6,13 +6,4 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object QuotesHelper {
 
-    private val BASE_URL = "https://quotable.io"
-
-    fun getRetrofitInstance(): Retrofit{
-        return Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-    }
-
 }

@@ -1,13 +1,14 @@
 package com.example.mvvmretrofitapp.viewmodel
 
-import android.util.Log
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.mvvmretrofitapp.data.api.model.Quote
 import com.example.mvvmretrofitapp.repository.QuoteRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class MainViewModel(private val quoteRepository: QuoteRepository): ViewModel() {
+@HiltViewModel
+class MainViewModel @Inject constructor(private val quoteRepository: QuoteRepository): ViewModel() {
 
     var quotesLiveData = MutableLiveData<Quote>()
 
